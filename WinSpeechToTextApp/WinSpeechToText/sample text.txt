@@ -1,0 +1,64 @@
+What Is JMeter?
+JMeter was first developed by Stefano Mazzocchi of Apache Software. Basically, JMeter is a Java based desktop application. JMeter uses Swing graphical API which means that it is not implemented by platform-specific coding.
+
+Therefore, JMeter can run on windows, Linux, Mac etc. Apache JMeter 3.1 is the latest version available in the market as of now with some more enhancements lined up for future.
+
+Below are some of the protocols supported by JMeter:
+
+HTTP, HTTPS
+FTP
+JDBC
+SOAP
+SMTP, IMAP
+LDAP
+TCP
+Why JMeter?         
+Since we have a market flooded with performance testing tools such as LoadRunner, Rational Performance Testing, VSTS and much more, there are many reasons which push companies and QA teams to go for JMeter as their primary tool for measuring performance.
+
+Below are some of the reasons which make JMeter outweigh other tools in the market:
+
+Free Tool – JMeter is a free tool and is easily available on Apache website
+User-Friendly Interface – JMeter’s interface is highly user-friendly and testers can easily get themselves familiar with a majority of its components. Help documentation for every component is available inside the tool
+Highly Extensible –  User can create his own sampler ( a type of request) using JSR223 and there are many plugins for Samplers available which allow testers to increase testing capabilities
+Protocols Support – JMeter is not only used for application performance testing, it supports all major protocols such as FTP, HTTP, JDBC, LDAP, SOAP etc.
+Recording Feature – JMeter has inbuilt HTTP(S) Test Script Recorder which can be used to record all actions from a website or mobile app and then load can be simulated to test performance under various load conditions. Also, there is a chrome extension available to record the actions and then the same script can be used in JMeter to scale the load
+Integration with Selenium – You can also integrate JMeter with Selenium for Automation testing
+Simple Installation – Installing JMeter is very easy. You need to have Java Installed on your machine and download JMeter and run the .bat file
+Reports – JMeter provides the tree, graphs, table representation of results which can be utilized as per your project demand
+ Installation Of JMeter
+Installation of JMeter is very easy. Before installing JMeter, please see the prerequisites below:
+
+Ensure that you have Java installed on your machine. To verify the version of Java which is installed, go to command prompt and type java – version
+Checking Java Version
+
+If Java is not Installed:
+
+In Case you don’t have Java Installed then go to https://java.com/en/download/ and download the latest JDK version from there. Install the Java with package installer
+Once Java is installed, you need to set the JAVA_HOME variable
+Follow the below steps to set your JAVA_HOME
+
+Check for the directory where Java is installed. Usually, it would be installed somewhere in “C:\Program Files\Java\jdk1.8.0_112”
+Right, Click on “My Computer” and open properties window
+Click the Environment Variables button
+In System Variables section, click New
+Enter JAVA_HOME in variable name text field
+For Variable Value Text field, enter JDK/JRE installation path. For example, “C:\Program Files\Java\jdk1.8.0_112” in my case
+Click OK
+
+Before we move on to explore Jmeter and its installation process, we need to know what is performance testing and how JMeter as a tool supports performance testing.
+
+Performance:  Just as students need to perform well to get themselves promoted to next level. In the same way, your application (mobile or the web or desktop) needs to perform well to move next level in a market where there are a lot of competitors.
+
+Performance testing measures how well your application is performing under a different workload.  There are many parameters which are considered to determine if the server under load test is behaving well and those will be discussed later in the article.
+
+Let’s take a simple example. I typed “www.facebook.com” in my browser and it displayed the Facebook’s home page in approx. 10 seconds. Now say 1000 people typed “www.facebook.com” and hit at the same time and Google home page gets displayed in may be more than 10 seconds. So, the performance changes under difference workload (number of users). This type of testing is utmost important as no matter how good design and functionalities you have in your application but if its performance is poor then you have high chances of losing all your potential target audience.Performance Testing Software Market 2019 financial overview of the Players such as IBM, Apache JMeter, Sauce Labs, Eggplant. The research report focuses on target groups of customers to help players to effectively market their products and achieve strong sales in the global Performance Testing Software market. It someone useful and relevant market information as per the business needs of players. Feature are provided with validated and authorize market forecast figures such as CAGR, revenue, production, consumption, and market share. Our straight market data equips players to plan powerful strategies ahead of time.
+
+Segmentation by product type, API Testing, Load Testing, Web Testing
+Segmentation by application: SME (Small and Medium Enterprises), Large Enterprise
+The report also presents the market competition landscape and a corresponding detailed analysis of the major vendor/manufacturers in the market., IBM, Apache JMeter, Sauce Labs, Eggplant, RedLine13, Load Impact, Performance Testing Software. The report offers deep geographical investigation where key regional and country level markets are brought to light. The vendor point of view is also analyzed in depth to reveal current and future market challenges and business tactics adopted by leading companies to tackle them.Market dynamics including drivers, restraints, challenges, opportunities, influence factors, and trends are specially focused upon to give a clear understanding of the global Performance Testing Software market. The research study includes in depth analysis where important type, application, and regional segments are studied in quite some detail.It also includes market channel, distribute, and customer analysis, industry cost analysis, organization profiles, market analysis by application, production, revenue, and price trend analysis by type, production and consumption analysis by region, and various other market studies. The Performance Testing Software report will the thorough study of the key business players to grasp their business methods, annual revenue, company profile and their contribution to the world market share.The report covers a huge area of information including an industry overview, comprehensive analysis, definitions and classifications, applications, and expert opinions.The Performance Testing Software Market report also provides exhaustive PEST analysis for all five regions namely; North America, Europe, Asia Pacific, South America, Middle East and Africa after evaluating political, economic, social and technological factors impression the market in these regions.
+
+The Performance Testing Software Market report wraps:
+
+Industry with market definition, key elements such as market restraints, drivers, potential opportunities, challenges, trends in the Performance Testing Software Market, etc. Performance Testing Software market sectioning depending on product, application, geographical region, competitive market share. Performance Testing Software market size, approximates, forecasts for the said frame of time. Distribution channel assessment of Performance Testing Software Market. Competitive analysis of crucial Performance Testing Software Market manufacturers, trends, company profiles, strategies, etc. Factors accountable for the growth of the Performance Testing Software Market. Factual information, insights, market date backed by statistics of Performance Testing Software Industry. In the end, The objective of the market research report is the current status of the market and in accordance classifies it into a few object. The report takes into consideration the first market players in every area from over the globe.
+
+The post Performance Testing Software Market 2019 financial overview of the Players such as IBM, Apache JMeter, Sauce Labs, Eggplant appeared first on Market Research Updates.
