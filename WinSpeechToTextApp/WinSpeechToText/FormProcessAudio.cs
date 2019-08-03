@@ -14,6 +14,7 @@ using System.Windows.Forms;
 using Common.Models;
 using Common.Enums;
 using Common.Utilities;
+using System.Drawing.Printing;
 
 namespace WinSpeechToText
 {
@@ -29,9 +30,9 @@ namespace WinSpeechToText
         private string host = ConfigurationManager.AppSettings["MiscrosoftSpeechAPI_SubscriptionRegion"] + ".stt.speech.microsoft.com";
         private int audioSampleRate = Convert.ToInt32(ConfigurationManager.AppSettings["AudioSampleRate"]);
 
-        private string filePath = ConfigurationManager.AppSettings["RecordingStoragePath"];
-        private string processedFilesPath = ConfigurationManager.AppSettings["ProcessedFilesPath"];
-        private string failedFilesPath = ConfigurationManager.AppSettings["FailedFilesPath"];
+        private string storagePath = ConfigurationManager.AppSettings["StoragePath"];
+        private string processedFilesPath = ConfigurationManager.AppSettings["StoragePath"] + ConfigurationManager.AppSettings["ProcessedFilesFolder"] + "\\";
+        private string failedFilesPath = ConfigurationManager.AppSettings["StoragePath"] + ConfigurationManager.AppSettings["FailedFilesFolder"] + "\\";
         private string fileNamePrefix = ConfigurationManager.AppSettings["RecordingNamePrefix"];
         private int minRecordSeconds = Convert.ToInt32(ConfigurationManager.AppSettings["MinRecordSeconds"]);
         private int maxRecordSeconds = Convert.ToInt32(ConfigurationManager.AppSettings["MaxRecordSeconds"]);
@@ -223,6 +224,19 @@ namespace WinSpeechToText
             if (printDialog1.ShowDialog() == DialogResult.OK)
             {
                 printText = rtbResult.Text;
+                /*
+                // A4 papersize
+                PaperSize ps = new PaperSize();
+                ps.RawKind = (int)PaperKind.A4;
+                printDocument1.DefaultPageSettings.PaperSize = ps;
+                */
+                // Create a new instance of Margins with 1-inch margins.
+                Margins margins = new Margins(100, 100, 100, 100);
+                printDocument1.DefaultPageSettings.Margins = margins;
+
+                // potrait mode
+                printDocument1.DefaultPageSettings.Landscape = false;
+
                 printDocument1.Print();
             }
 
@@ -345,8 +359,8 @@ namespace WinSpeechToText
         /// </summary>
         private void StartRecording()
         {
-            if (!Directory.Exists(filePath))
-                Directory.CreateDirectory(filePath);
+            if (!Directory.Exists(storagePath))
+                Directory.CreateDirectory(storagePath);
 
             if (!Directory.Exists(processedFilesPath))
                 Directory.CreateDirectory(processedFilesPath);
@@ -362,7 +376,7 @@ namespace WinSpeechToText
             //device.AudioEndpointVolume.Mute = false;
 
             audiofileName = fileNamePrefix + DateTime.Now.ToString("ddMMyyyyHHmmss") + ".wav";
-            audioFileNameWithPath = filePath + audiofileName;
+            audioFileNameWithPath = storagePath + audiofileName;
 
             if (File.Exists(audioFileNameWithPath))
             {

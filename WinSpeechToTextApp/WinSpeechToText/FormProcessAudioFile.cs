@@ -29,7 +29,8 @@ namespace WinSpeechToText
         private string host = ConfigurationManager.AppSettings["MiscrosoftSpeechAPI_SubscriptionRegion"] + ".stt.speech.microsoft.com";
         private int audioSampleRate = Convert.ToInt32(ConfigurationManager.AppSettings["AudioSampleRate"]);
         private int speechServiceType = Convert.ToInt32(ConfigurationManager.AppSettings["SpeechServiceType"]); //1:SDK, 2:API
-        private string processedFilesPath = ConfigurationManager.AppSettings["ProcessedFilesPath"];
+        private string storagePath = ConfigurationManager.AppSettings["StoragePath"];
+        private string processedFilesPath = ConfigurationManager.AppSettings["StoragePath"] + ConfigurationManager.AppSettings["ProcessedFilesFolder"] + "\\";
         private int enableAutoSaveReponseToFile = Convert.ToInt32(ConfigurationManager.AppSettings["EnableAutoSaveReponseToFile"]);
         private int enablePrint = Convert.ToInt32(ConfigurationManager.AppSettings["EnablePrint"]);
 
@@ -203,7 +204,7 @@ namespace WinSpeechToText
                 printDocument1.DefaultPageSettings.Margins = margins;
 
                 // potrait mode
-                printDocument1.DefaultPageSettings.Landscape = true;
+                printDocument1.DefaultPageSettings.Landscape = false;
                 
                 printDocument1.Print();
             }
